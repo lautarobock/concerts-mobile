@@ -1,0 +1,12 @@
+<ActionBar class="action-bar">
+    <Label class="action-bar-title" text="Browse"></Label>
+</ActionBar>
+
+<GridLayout class="page page-content">
+    <Label class="page-icon fa" text="&#xf1ea;"></Label>
+    <ListView [items]="concerts" class="list-group">
+        <ng-template let-item="item">
+            <Label [nsRouterLink]="['../item', item._id]" [text]="item.title" class="list-group-item"></Label>
+        </ng-template>
+    </ListView>
+</GridLayout>
